@@ -1,0 +1,37 @@
+<div id="header">
+  <div class="logo">
+    <a routerLink="/">OSPLabs</a>
+  </div>
+  <nav>
+    <form class="search" action="search.php">
+      <input name="q" placeholder="Search..." type="search">
+    </form>
+    <ul>
+      <li>
+        <a routerLink="/">Home</a>
+      </li>
+      <li class="dropdown">
+        <a *ngIf="!isLoggedIn" routerLink="/login">Login</a>
+        <a *ngIf="isLoggedIn" routerLink="/logout">Logout</a>
+        
+        <!-- <ul>
+          <li>
+            
+          </li>
+        </ul> -->
+      </li>
+      <li class="dropdown">
+        <a routerLink="/patient" >Patient</a>
+        
+      </li>
+      <li class="dropdown">
+        <a routerLink="/contact">Contact</a>
+        <ul>
+          <li>
+            <a routerLink="/contact-us">Contact Us</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>
